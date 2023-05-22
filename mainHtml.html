@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>WEBVIBES</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+	<script>
+		document.querySelector("#make_a_deal button").addEventListener("click", function () {
+			alert("Get started button clicked!");
+			// Add your desired functionality here
+		});
+
+		function smoothScroll(elementSelector) {
+			$('html, body').animate({
+				scrollTop: $(elementSelector).offset().top
+			}, 700); // Adjust the duration (in milliseconds) to control the scroll speed
+		}
+	</script>
+	<!--PERSONAL SCRIPT JavaScript-->
+</head>
+<header>
+	<h4>WEBVIBES</h4>
+	<p onClick="smoothScroll('#slideshow_btn')"> About</p>
+	<p>Services</p>
+	<p>Contact</p>
+</header>
+
+<body>
+	<div class="container">
+
+		<div class="panel">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+		<div class="panel">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+		<div class="panel">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+		<div class="panel">
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+
+	<div class="layer">
+		<h1>WE<span>ARE</span>WEBVIBES</h1>
+		<div class="cta" onClick="smoothScroll('#slideshow_btn')">
+			<p>MORE</p>
+			<svg viewBox="0 0 24 24">
+				<path d="M5 12h14M12 5l7 7-7 7" />
+			</svg>
+		</div>
+	</div>
+	<div class="text-indented">
+		<h1>WHAT EXPERTISE DO WE OFFER?</h1>
+	</div>
+
+	<section id="slideshow_btn">
+		<div class="content-width">
+			<div class="slideshow">
+				<!-- Slideshow Items -->
+				<div class="slideshow-items">
+					<div class="item">
+						<div class="item-image-container">
+							<img class="item-image"
+								src="https://i.pinimg.com/564x/23/a4/86/23a4860b8b70b1eb27f2791b97aaee8e.jpg" />
+						</div>
+						<!-- Staggered Header Elements -->
+						<div class="item-header">
+							<span class="vertical-part"><b>WEB <br> DEVELOPMENT</b></span>
+						</div>
+						<!-- Staggered Description Elements -->
+						<div class="item-description">
+							<span class="vertical-part">
+								<p>Airbnb ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum
+									gravida ex at maximus. Nullam quis leo ipsum. Lorem ipsum Nam consectetur malesuada
+									blandit. Mauris vulputate purus id dolor euismod varius.</p>
+							</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-image-container">
+							<img class="item-image"
+								src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1232e48702241.589f548dc6bee.jpg" />
+						</div>
+						<!-- Staggered Header Elements -->
+						<div class="item-header">
+							<span class="vertical-part"><b>Rebranding</b></span>
+						</div>
+						<!-- Staggered Description Elements -->
+						<div class="item-description">
+							<span class="vertical-part">
+								<p>Airbnb ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum
+									gravida ex at maximus. Nullam quis leo ipsum. Lorem ipsum Nam consectetur malesuada
+									blandit. Mauris vulputate purus id dolor euismod varius.</p>
+							</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="item-image-container">
+							<img class="item-image"
+								src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1232e48702241.589f548dc6bee.jpg" />
+						</div>
+						<!-- Staggered Header Elements -->
+						<div class="item-header">
+							<span class="vertical-part"><b>Transformation</b></span>
+						</div>
+						<!-- Staggered Description Elements -->
+						<div class="item-description">
+							<span class="vertical-part">
+								<p>Airbnb ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum
+									gravida ex at maximus. Nullam quis leo ipsum. Lorem ipsum Nam consectetur malesuada
+									blandit. Mauris vulputate purus id dolor euismod varius.</p>
+							</span>
+
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<ul>
+						<li class="control" data-index="0"></li>
+						<li class="control" data-index="1"></li>
+						<li class="control" data-index="2"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="make_a_deal">
+			<h1>DO YOU THINK WE CAN HELP YOU? WE SURE WE CAN!</h1>
+			<button type="button">
+				TALK TO US
+			</button>
+	</section>
+
+
+	<footer>
+		<div id="hide" class="replay">REPLAY</div>
+	</footer>
+
+	<script src="main.js"></script>
+
+</body>
+
+</html>
