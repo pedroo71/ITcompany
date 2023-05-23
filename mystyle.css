@@ -207,7 +207,7 @@ header p:hover {
 .panel:nth-child(4) .back {
   background-position: 1000px 0;
 }
-
+/* 
 footer {
   position: fixed;
   left: 50%;
@@ -229,7 +229,7 @@ footer p {
 footer a {
   color: var(--pink);
   text-decoration: none;
-}
+} */
 
 .replay {
   cursor: pointer;
@@ -251,7 +251,6 @@ footer a {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -371,7 +370,7 @@ footer a {
   width: 10px;
   height: 10px;
   margin: 3px;
-  background: #bdbdd5;
+  background: #d6157c;
   cursor: pointer;
 }
 
@@ -404,6 +403,264 @@ footer a {
   color: var(--pink);
 }
 
+.carrouselContainer {
+  position: relative;
+  width: 320px;
+  margin: 0 auto 0 auto;
+  perspective: 2000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+  color: #fefefe;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px); }
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+.gallery {
+	display: flex;
+	padding: 2px;
+	transition: 0.3s;
+}
+
+.gallery:hover .gallery__image {
+	filter: grayscale(1);
+}
+
+.gallery__column {
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+}
+
+.gallery__link {
+	margin: 2px;
+	overflow: hidden;
+}
+
+.gallery__link:hover .gallery__image {
+	filter: grayscale(0);
+}
+
+.gallery__link:hover .gallery__caption {
+	opacity: 1;
+}
+
+.gallery__thumb {
+	position: relative;
+}
+
+.gallery__image {
+	display: block;
+	width: 100%;
+	transition: 0.3s;
+}
+
+.gallery__image:hover {
+	transform: scale(1.1);
+}
+
+.gallery__caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 25px 15px 15px;
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	color: #d6157c;
+	opacity: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255 ,255 , 0) 100%);
+	transition: 0.3s;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1574 {
+  font-family: 'Lato', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.snip1574 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.snip1574 img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.7;
+}
+
+.snip1574 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 10% 15%;
+}
+
+.snip1574 figcaption:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 170px;
+  opacity: 0.35;
+  font-style: normal;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0px;
+  left: 50%;
+}
+
+.snip1574 blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.snip1574 h3 {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+.snip1574 h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #d6157c;
+  letter-spacing: 1px;
+}
+
+.footer {
+  background-color: #00000033;
+  padding: 30px 0;
+  margin-top: 10%;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex-basis: 30%;
+  margin-bottom: 30px;
+}
+
+.footer-column h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #d6157c;
+}
+
+.footer-column p {
+  color: #abababbd;
+} 
+
+.social-icons a {
+  color: #888;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #555;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+
 
 /**************************************************TECH LEAD DEVELOPMENT********************************************/
 
@@ -421,8 +678,14 @@ footer a {
 
 /*Make it aligned with the first image animation*/
 .text-indented {
-  text-align: left;
-  text-indent: 25%;
-  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
   color: var(--white);
+}
+
+
+.center-testimonials-block {
+  display: flex;
+  justify-content: center;
 }
